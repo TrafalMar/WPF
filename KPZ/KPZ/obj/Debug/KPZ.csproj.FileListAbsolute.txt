@@ -1,0 +1,10 @@
+C:\Users\TrafalMar\Documents\GitHub\WPF\KPZ\KPZ\bin\Debug\KPZ.exe.config
+C:\Users\TrafalMar\Documents\GitHub\WPF\KPZ\KPZ\bin\Debug\KPZ.exe
+C:\Users\TrafalMar\Documents\GitHub\WPF\KPZ\KPZ\bin\Debug\KPZ.pdb
+C:\Users\TrafalMar\Documents\GitHub\WPF\KPZ\KPZ\obj\Debug\KPZ.csprojAssemblyReference.cache
+C:\Users\TrafalMar\Documents\GitHub\WPF\KPZ\KPZ\obj\Debug\KPZ.Form1.resources
+C:\Users\TrafalMar\Documents\GitHub\WPF\KPZ\KPZ\obj\Debug\KPZ.Properties.Resources.resources
+C:\Users\TrafalMar\Documents\GitHub\WPF\KPZ\KPZ\obj\Debug\KPZ.csproj.GenerateResource.cache
+C:\Users\TrafalMar\Documents\GitHub\WPF\KPZ\KPZ\obj\Debug\KPZ.csproj.CoreCompileInputs.cache
+C:\Users\TrafalMar\Documents\GitHub\WPF\KPZ\KPZ\obj\Debug\KPZ.exe
+C:\Users\TrafalMar\Documents\GitHub\WPF\KPZ\KPZ\obj\Debug\KPZ.pdb

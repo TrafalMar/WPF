@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<ArrayOfProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Project>
+    <person>
+      <Person>
+        <name>Vova</name>
+        <surname>Limarenko</surname>
+        <email>vovan@gmail.com</email>
+      </Person>
+    </person>
+    <name>KotletK@</name>
+    <task>fry</task>
+    <state>psh' psh'</state>
+  </Project>
+  <Project>
+    <person>
+      <Person>
+        <name>Slava</name>
+        <surname>Karpovich</surname>
+        <email>Vacheslav@gmail.com</email>
+      </Person>
+      <Person>
+        <name>Bogdan</name>
+        <surname>Prus</surname>
+        <email>Sting@gnail.com</email>
+      </Person>
+      <Person>
+        <name>Slava</name>
+        <surname>Ukraini</surname>
+        <email>forTheUkraine@my.salo</email>
+      </Person>
+    </person>
+    <name>KotletK@</name>
+    <task>boil</task>
+    <state>bul' bul'</state>
+  </Project>
+  <Project>
+    <person>
+      <Person>
+        <name>Vlad</name>
+        <surname>Sava</surname>
+        <email>vladiksav2@gmail.com</email>
+      </Person>
+    </person>
+    <name>Soft</name>
+    <task>task!</task>
+    <state>do</state>
+  </Project>
+</ArrayOfProject>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Person>
+    <name>Slava</name>
+    <surname>Ukraini</surname>
+    <email>forTheUkraine@my.salo</email>
+  </Person>
+  <Person>
+    <name>Bogdan</name>
+    <surname>Prus</surname>
+    <email>Sting@gnail.com</email>
+  </Person>
+  <Person>
+    <name>Slava</name>
+    <surname>Karpovich</surname>
+    <email>Vacheslav@gmail.com</email>
+  </Person>
+  <Person>
+    <name>Vova</name>
+    <surname>Limarenko</surname>
+    <email>vovan@gmail.com</email>
+  </Person>
+  <Person>
+    <name>Vlad</name>
+    <surname>Sava</surname>
+    <email>vladiksav2@gmail.com</email>
+  </Person>
+</ArrayOfPerson>
