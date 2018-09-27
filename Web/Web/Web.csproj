@@ -94,13 +94,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\img\back.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\img\forward.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="bin\Debug\img\refresh.png" />
+    <Folder Include="bin\Debug\img\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

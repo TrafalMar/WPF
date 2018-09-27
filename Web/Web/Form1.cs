@@ -21,12 +21,7 @@ namespace Web
 
         private void InjectJavascript()
         {
-            if (webBrowser1.Url!=null)
-            {
-                HtmlElement head = webBrowser1.Document.GetElementsByTagName("head")[0];
-                HtmlElement script = webBrowser1.Document.CreateElement("script");
-                
-            }
+
         }
 
         static Design design = new Design();
@@ -34,10 +29,10 @@ namespace Web
         {
             FormControl formControl = new FormControl(this);
             Button[] btn_menu = { close_win, maximize_win, hide_win };
-            Button[] btn_search = { back, forward, refresh };
-            design.search_btn_style(btn_search, this);
+            //Button[] btn_search = { back, forward, refresh };
+            //design.search_btn_style(btn_search, this);
             design.menu_btn_style(btn_menu, this);
-            
+
         }
 
         private void close_win_Click(object sender, EventArgs e)
@@ -72,7 +67,7 @@ namespace Web
 
         private void refresh_Click(object sender, EventArgs e)
         {
-            webBrowser1.Refresh();
+            //webBrowser1.Refresh();
         }
         int eX, eY;
         bool clicked;
@@ -91,22 +86,33 @@ namespace Web
             clicked = false;
         }
 
-        private void back_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            webBrowser1.GoBack();
+            TabPage tab = new TabPage();
+            WebBrowser wb = new WebBrowser();
+            wb.Dock = DockStyle.Fill;
+            wb.Navigate("www.google.com");
+            tabControl1.Controls.Add(tab);
+            tab.Controls.Add(wb);
+            wb.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(siteTitle);
+            tabControl1.SelectedIndex = tabControl1.TabCount - 1;
+
         }
 
-        private void forward_Click(object sender, EventArgs e)
+        public void siteTitle(object hendler, WebBrowserDocumentCompletedEventArgs e)
         {
-            webBrowser1.GoForward();
-        }
 
-        private void search_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)13) {
-                webBrowser1.Navigate("https://www.google.com.ua/search?q=" + search.Text);
+            String title = ((WebBrowser)tabControl1.SelectedTab.Controls[0]).DocumentTitle;
+            if (title.Length >= 18)
+                tabControl1.SelectedTab.Text = title.Substring(0, 18) + "...";
+            else
+            {
+                tabControl1.SelectedTab.Text = title;
             }
         }
+
+
+
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -119,7 +125,6 @@ namespace Web
         {
             Button[] btn = { close_win, maximize_win, hide_win };
             design.menu_btn_style(btn, this);
-            search.Width = panel5.Width-250;
         }
     }
 }
