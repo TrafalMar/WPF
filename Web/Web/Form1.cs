@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Web.Classes;
+using cef;
+using CefSharp.WinForms;
+using CefSharp;
+
 
 namespace Web
 {
@@ -16,6 +20,7 @@ namespace Web
         public Form1()
         {
             InitializeComponent();
+            
             this.SetStyle(ControlStyles.ResizeRedraw, true);
         }
 
@@ -28,11 +33,9 @@ namespace Web
         private void Form1_Load(object sender, EventArgs e)
         {
             FormControl formControl = new FormControl(this);
-            Button[] btn_menu = { close_win, maximize_win, hide_win };
-            Button[] btn_search = { button2, button3, button4,button5,button1 };
+            Button[] btn_search = { back, forward, reload,close,add };
             design.search_btn_style(btn_search, this);
-            design.menu_btn_style(btn_menu, this);
-
+            addPage();
         }
 
         private void close_win_Click(object sender, EventArgs e)
@@ -85,65 +88,87 @@ namespace Web
 
         private void button1_Click(object sender, EventArgs e)
         {
+            addPage();
+        }
+        protected void addPage() {
             TabPage tab = new TabPage();
-            WebBrowser wb = new WebBrowser();
-            wb.Dock = DockStyle.Fill;
-            wb.Navigate("www.google.com");
-            wb.ScriptErrorsSuppressed = true;
+            ChromiumWebBrowser wb = new ChromiumWebBrowser("www.google.com")
+            {
+                Dock = DockStyle.Fill,
+            };
             tabControl1.Controls.Add(tab);
             tab.Controls.Add(wb);
-            wb.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(siteTitle);
-            wb.ProgressChanged += new WebBrowserProgressChangedEventHandler(setProgress);
+            wb.AddressChanged += adressChanged;
+            wb.TitleChanged += onWebTitleChanged;
             tabControl1.SelectedIndex = tabControl1.TabCount - 1;
-
         }
-        public void setProgress(object hendler, WebBrowserProgressChangedEventArgs e) {
-            toolStripProgressBar1.Maximum = (int)e.MaximumProgress;
-            if(e.CurrentProgress>=0)toolStripProgressBar1.Value = (int)e.CurrentProgress;
+        public void onWebTitleChanged(object hendler, TitleChangedEventArgs e) {
+            BeginInvoke((Action)(()=> {
+                String title = e.Title;
+                tabControl1.SelectedTab.Text = "| " + title+" |";
+            }));
         }
-        public void siteTitle(object hendler, WebBrowserDocumentCompletedEventArgs e)
+        public void adressChanged(object hendler, AddressChangedEventArgs e)
         {
-
-            String title = ((WebBrowser)tabControl1.SelectedTab.Controls[0]).DocumentTitle;
-            if (title.Length >= 18)
-                tabControl1.SelectedTab.Text = title.Substring(0, 18) + "...";
-            else
+            BeginInvoke((Action)(() =>
             {
-                tabControl1.SelectedTab.Text = title;
-            }
+                String url = e.Address;
+                textBox1.Text = url ;
+            }));
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ((WebBrowser)tabControl1.SelectedTab.Controls[0]).GoBack();
+            if (tabControl1.TabCount != 0)
+                ((ChromiumWebBrowser)tabControl1.SelectedTab.Controls[0]).Back();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ((WebBrowser)tabControl1.SelectedTab.Controls[0]).GoForward();
+            if (tabControl1.TabCount != 0)
+                ((ChromiumWebBrowser)tabControl1.SelectedTab.Controls[0]).Forward();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            ((WebBrowser)tabControl1.SelectedTab.Controls[0]).Refresh();
+            if (tabControl1.TabCount != 0)
+                ((ChromiumWebBrowser)tabControl1.SelectedTab.Controls[0]).Reload();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedTab.Dispose();
+            int index = 0;
+            if (tabControl1.TabCount != 0)
+            {
+                index = tabControl1.SelectedIndex;
+                tabControl1.SelectedTab.Dispose();
+            }
+            if (tabControl1.TabCount != 0 && (index -1)>=0)
+                tabControl1.SelectedIndex = index - 1;
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13) {
                 if(textBox1.Text!=String.Empty)
-                ((WebBrowser)tabControl1.SelectedTab.Controls[0]).Navigate("www.google.com/search?q="+textBox1.Text);
+                ((ChromiumWebBrowser)tabControl1.SelectedTab.Controls[0]).Load("www.google.com/search?q="+textBox1.Text);
             }
         }
 
         private void x(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void metroLink1_Click(object sender, EventArgs e)
+        {
+            metroContextMenu1.Show(metroLink1,-metroContextMenu1.Width+metroLink1.Width,metroLink1.Height);
+        }
+
+        private void textBox1_ButtonClick(object sender, EventArgs e)
+        {
+            if (textBox1.Text != String.Empty)
+                ((ChromiumWebBrowser)tabControl1.SelectedTab.Controls[0]).Load("www.google.com/search?q=" + textBox1.Text);
         }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
@@ -155,8 +180,7 @@ namespace Web
 
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
-            Button[] btn = { close_win, maximize_win, hide_win };
-            design.menu_btn_style(btn, this);
+            design.search(textBox1,this);
         }
     }
 }

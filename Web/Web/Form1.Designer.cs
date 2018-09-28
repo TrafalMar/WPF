@@ -28,292 +28,261 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.hide_win = new System.Windows.Forms.Button();
-            this.maximize_win = new System.Windows.Forms.Button();
-            this.close_win = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.panel1.SuspendLayout();
+            this.textBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLink1 = new MetroFramework.Controls.MetroLink();
+            this.back = new System.Windows.Forms.Button();
+            this.forward = new System.Windows.Forms.Button();
+            this.close = new System.Windows.Forms.Button();
+            this.reload = new System.Windows.Forms.Button();
+            this.add = new System.Windows.Forms.Button();
+            this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
+            this.preferencesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.panel3.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
+            this.metroContextMenu1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel1.Controls.Add(this.hide_win);
-            this.panel1.Controls.Add(this.maximize_win);
-            this.panel1.Controls.Add(this.close_win);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1265, 49);
-            this.panel1.TabIndex = 2;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
-            // 
-            // hide_win
-            // 
-            this.hide_win.FlatAppearance.BorderSize = 0;
-            this.hide_win.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.hide_win.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hide_win.Location = new System.Drawing.Point(1057, 0);
-            this.hide_win.Margin = new System.Windows.Forms.Padding(4);
-            this.hide_win.Name = "hide_win";
-            this.hide_win.Size = new System.Drawing.Size(71, 46);
-            this.hide_win.TabIndex = 3;
-            this.hide_win.Text = "—";
-            this.hide_win.UseVisualStyleBackColor = true;
-            this.hide_win.Click += new System.EventHandler(this.hide_win_Click);
-            // 
-            // maximize_win
-            // 
-            this.maximize_win.FlatAppearance.BorderSize = 0;
-            this.maximize_win.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.maximize_win.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.maximize_win.Location = new System.Drawing.Point(1127, 0);
-            this.maximize_win.Margin = new System.Windows.Forms.Padding(4);
-            this.maximize_win.Name = "maximize_win";
-            this.maximize_win.Size = new System.Drawing.Size(71, 46);
-            this.maximize_win.TabIndex = 2;
-            this.maximize_win.Text = "[]]";
-            this.maximize_win.UseVisualStyleBackColor = true;
-            this.maximize_win.Click += new System.EventHandler(this.maximize_win_Click);
-            // 
-            // close_win
-            // 
-            this.close_win.FlatAppearance.BorderSize = 0;
-            this.close_win.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.close_win.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.close_win.Location = new System.Drawing.Point(1193, 0);
-            this.close_win.Margin = new System.Windows.Forms.Padding(4);
-            this.close_win.Name = "close_win";
-            this.close_win.Size = new System.Drawing.Size(71, 46);
-            this.close_win.TabIndex = 1;
-            this.close_win.Text = "X";
-            this.close_win.UseVisualStyleBackColor = true;
-            this.close_win.Click += new System.EventHandler(this.close_win_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 100);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(0, 54);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1265, 1);
+            this.panel4.Size = new System.Drawing.Size(939, 1);
             this.panel4.TabIndex = 4;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.metroLink1);
+            this.panel3.Controls.Add(this.back);
+            this.panel3.Controls.Add(this.forward);
+            this.panel3.Controls.Add(this.close);
+            this.panel3.Controls.Add(this.reload);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.panel1);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.add);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1265, 101);
+            this.panel3.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel3.Size = new System.Drawing.Size(949, 55);
             this.panel3.TabIndex = 3;
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(372, 58);
+            // 
+            // 
+            // 
+            this.textBox1.CustomButton.BackColor = System.Drawing.Color.White;
+            this.textBox1.CustomButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textBox1.CustomButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.CustomButton.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.textBox1.CustomButton.Location = new System.Drawing.Point(439, 1);
+            this.textBox1.CustomButton.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox1.CustomButton.Name = "";
+            this.textBox1.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.textBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.textBox1.CustomButton.TabIndex = 1;
+            this.textBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.textBox1.CustomButton.UseSelectable = true;
+            this.textBox1.CustomButton.UseVisualStyleBackColor = false;
+            this.textBox1.DisplayIcon = true;
+            this.textBox1.Icon = ((System.Drawing.Image)(resources.GetObject("textBox1.Icon")));
+            this.textBox1.Lines = new string[0];
+            this.textBox1.Location = new System.Drawing.Point(274, 9);
+            this.textBox1.MaxLength = 32767;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(685, 30);
-            this.textBox1.TabIndex = 8;
+            this.textBox1.PasswordChar = '\0';
+            this.textBox1.PromptText = "Search";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textBox1.SelectedText = "";
+            this.textBox1.SelectionLength = 0;
+            this.textBox1.SelectionStart = 0;
+            this.textBox1.ShortcutsEnabled = true;
+            this.textBox1.ShowButton = true;
+            this.textBox1.ShowClearButton = true;
+            this.textBox1.Size = new System.Drawing.Size(467, 29);
+            this.textBox1.Style = MetroFramework.MetroColorStyle.Orange;
+            this.textBox1.TabIndex = 10;
+            this.textBox1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.textBox1.UseSelectable = true;
+            this.textBox1.WaterMark = "Search";
+            this.textBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.textBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.textBox1_ButtonClick);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
-            // button2
+            // metroLink1
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(8, 48);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(67, 51);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "<<";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.metroLink1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("metroLink1.BackgroundImage")));
+            this.metroLink1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.metroLink1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroLink1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.metroLink1.Location = new System.Drawing.Point(908, 0);
+            this.metroLink1.Name = "metroLink1";
+            this.metroLink1.Size = new System.Drawing.Size(31, 54);
+            this.metroLink1.TabIndex = 9;
+            this.metroLink1.UseSelectable = true;
+            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
             // 
-            // button3
+            // back
             // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(74, 48);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(67, 51);
-            this.button3.TabIndex = 5;
-            this.button3.Text = ">>";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("back.BackgroundImage")));
+            this.back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.back.FlatAppearance.BorderSize = 0;
+            this.back.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.back.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.back.Location = new System.Drawing.Point(4, 7);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(40, 34);
+            this.back.TabIndex = 4;
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button5
+            // forward
             // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(204, 48);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(90, 51);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Close";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.forward.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("forward.BackgroundImage")));
+            this.forward.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.forward.FlatAppearance.BorderSize = 0;
+            this.forward.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.forward.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.forward.Location = new System.Drawing.Point(43, 7);
+            this.forward.Name = "forward";
+            this.forward.Size = new System.Drawing.Size(45, 34);
+            this.forward.TabIndex = 5;
+            this.forward.UseVisualStyleBackColor = true;
+            this.forward.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // close
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(140, 48);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(65, 51);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "@";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.close.FlatAppearance.BorderSize = 0;
+            this.close.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.close.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.close.Location = new System.Drawing.Point(128, 7);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(72, 34);
+            this.close.TabIndex = 7;
+            this.close.Text = "Close";
+            this.close.UseVisualStyleBackColor = true;
+            this.close.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button1
+            // reload
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(293, 48);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 51);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "New";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.reload.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("reload.BackgroundImage")));
+            this.reload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.reload.FlatAppearance.BorderSize = 0;
+            this.reload.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.reload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reload.Location = new System.Drawing.Point(87, 7);
+            this.reload.Name = "reload";
+            this.reload.Size = new System.Drawing.Size(42, 34);
+            this.reload.TabIndex = 6;
+            this.reload.UseVisualStyleBackColor = true;
+            this.reload.Click += new System.EventHandler(this.button4_Click);
             // 
-            // tabPage1
+            // add
             // 
-            this.tabPage1.Controls.Add(this.webBrowser1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(1257, 528);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "webPage";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.add.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("add.BackgroundImage")));
+            this.add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.add.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.add.FlatAppearance.BorderSize = 0;
+            this.add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.add.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.add.Location = new System.Drawing.Point(199, 7);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(54, 34);
+            this.add.TabIndex = 4;
+            this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.button1_Click);
             // 
-            // webBrowser1
+            // metroContextMenu1
             // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(4, 4);
-            this.webBrowser1.Margin = new System.Windows.Forms.Padding(4);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(27, 25);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(1249, 520);
-            this.webBrowser1.TabIndex = 0;
-            this.webBrowser1.Url = new System.Uri("http://www.google.com", System.UriKind.Absolute);
-            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.siteTitle);
+            this.metroContextMenu1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.metroContextMenu1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.preferencesToolStripMenuItem,
+            this.historyToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.exitToolStripMenuItem});
+            this.metroContextMenu1.Name = "metroContextMenu1";
+            this.metroContextMenu1.Size = new System.Drawing.Size(184, 100);
+            // 
+            // preferencesToolStripMenuItem
+            // 
+            this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
+            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(183, 30);
+            this.preferencesToolStripMenuItem.Text = "Preferences";
+            // 
+            // historyToolStripMenuItem
+            // 
+            this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
+            this.historyToolStripMenuItem.Size = new System.Drawing.Size(183, 30);
+            this.historyToolStripMenuItem.Text = "History";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(183, 30);
+            this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 101);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.ItemSize = new System.Drawing.Size(0, 29);
+            this.tabControl1.Location = new System.Drawing.Point(0, 55);
             this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1265, 557);
-            this.tabControl1.TabIndex = 4;
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripProgressBar1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 634);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1265, 24);
-            this.statusStrip1.TabIndex = 5;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 18);
+            this.tabControl1.Size = new System.Drawing.Size(949, 480);
+            this.tabControl1.Style = MetroFramework.MetroColorStyle.Orange;
+            this.tabControl1.TabIndex = 6;
+            this.tabControl1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tabControl1.UseSelectable = true;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1265, 658);
-            this.ControlBox = false;
-            this.Controls.Add(this.statusStrip1);
+            this.ClientSize = new System.Drawing.Size(949, 535);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel3);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(600, 200);
             this.Name = "Form1";
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.SizeChanged += new System.EventHandler(this.Form1_SizeChanged);
-            this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.metroContextMenu1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button hide_win;
-        private System.Windows.Forms.Button maximize_win;
-        private System.Windows.Forms.Button close_win;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.WebBrowser webBrowser1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.Button close;
+        private System.Windows.Forms.Button forward;
+        private System.Windows.Forms.Button add;
+        private System.Windows.Forms.Button back;
+        private System.Windows.Forms.Button reload;
+        private MetroFramework.Controls.MetroLink metroLink1;
+        private MetroFramework.Controls.MetroContextMenu metroContextMenu1;
+        private System.Windows.Forms.ToolStripMenuItem preferencesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem historyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private MetroFramework.Controls.MetroTabControl tabControl1;
+        private MetroFramework.Controls.MetroTextBox textBox1;
     }
 }
 
