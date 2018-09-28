@@ -29,8 +29,8 @@ namespace Web
         {
             FormControl formControl = new FormControl(this);
             Button[] btn_menu = { close_win, maximize_win, hide_win };
-            //Button[] btn_search = { back, forward, refresh };
-            //design.search_btn_style(btn_search, this);
+            Button[] btn_search = { button2, button3, button4,button5,button1 };
+            design.search_btn_style(btn_search, this);
             design.menu_btn_style(btn_menu, this);
 
         }
@@ -65,10 +65,7 @@ namespace Web
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void refresh_Click(object sender, EventArgs e)
-        {
-            //webBrowser1.Refresh();
-        }
+        
         int eX, eY;
         bool clicked;
 
@@ -92,13 +89,18 @@ namespace Web
             WebBrowser wb = new WebBrowser();
             wb.Dock = DockStyle.Fill;
             wb.Navigate("www.google.com");
+            wb.ScriptErrorsSuppressed = true;
             tabControl1.Controls.Add(tab);
             tab.Controls.Add(wb);
             wb.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(siteTitle);
+            wb.ProgressChanged += new WebBrowserProgressChangedEventHandler(setProgress);
             tabControl1.SelectedIndex = tabControl1.TabCount - 1;
 
         }
-
+        public void setProgress(object hendler, WebBrowserProgressChangedEventArgs e) {
+            toolStripProgressBar1.Maximum = (int)e.MaximumProgress;
+            if(e.CurrentProgress>=0)toolStripProgressBar1.Value = (int)e.CurrentProgress;
+        }
         public void siteTitle(object hendler, WebBrowserDocumentCompletedEventArgs e)
         {
 
@@ -111,8 +113,38 @@ namespace Web
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ((WebBrowser)tabControl1.SelectedTab.Controls[0]).GoBack();
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ((WebBrowser)tabControl1.SelectedTab.Controls[0]).GoForward();
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ((WebBrowser)tabControl1.SelectedTab.Controls[0]).Refresh();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab.Dispose();
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13) {
+                if(textBox1.Text!=String.Empty)
+                ((WebBrowser)tabControl1.SelectedTab.Controls[0]).Navigate("www.google.com/search?q="+textBox1.Text);
+            }
+        }
+
+        private void x(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
 
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {

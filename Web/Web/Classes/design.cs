@@ -30,7 +30,7 @@ namespace Web.Classes
                 i.FlatAppearance.BorderSize = 0;
                 i.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
                 i.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(240,240,240);
-                i.Left = i.Width * but_count+20;
+                i.Margin = new Padding(0);
                 but_count += 1;
             }
         }
