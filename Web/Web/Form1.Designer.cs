@@ -53,9 +53,9 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 54);
+            this.panel4.Location = new System.Drawing.Point(10, 54);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(939, 1);
+            this.panel4.Size = new System.Drawing.Size(929, 1);
             this.panel4.TabIndex = 4;
             // 
             // panel3
@@ -71,7 +71,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
+            this.panel3.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.panel3.Size = new System.Drawing.Size(949, 55);
             this.panel3.TabIndex = 3;
             // 
@@ -224,6 +224,7 @@
             this.historyToolStripMenuItem.Name = "historyToolStripMenuItem";
             this.historyToolStripMenuItem.Size = new System.Drawing.Size(183, 30);
             this.historyToolStripMenuItem.Text = "History";
+            this.historyToolStripMenuItem.Click += new System.EventHandler(this.historyToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
