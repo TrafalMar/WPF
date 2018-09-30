@@ -265,7 +265,6 @@ namespace Web
                 RowCount = 2,
                 ColumnCount = 4,
                 Dock = DockStyle.Fill,
-                BackColor = Color.Aqua,
             };
             table.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
             table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20));
